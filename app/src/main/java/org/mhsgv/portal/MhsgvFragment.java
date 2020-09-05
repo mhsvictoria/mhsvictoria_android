@@ -17,6 +17,8 @@ import android.widget.TextView;
  */
 public class MhsgvFragment extends Fragment {
 
+    private static String TAG = MhsgvFragment.class.getSimpleName();
+
     private static final String LAYOUT = "layout";
 
     public MhsgvFragment() {
@@ -41,7 +43,7 @@ public class MhsgvFragment extends Fragment {
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
                              Bundle savedInstanceState) {
         // Inflate the layout for this fragment
-        Log.d("", "FRAGMENT CREATE VIEW " + getArguments().getInt(LAYOUT));
+        Log.d(TAG, "FRAGMENT CREATE VIEW " + getArguments().getInt(LAYOUT));
         View view = inflater.inflate(getArguments().getInt(LAYOUT), container, false);
         TextView textView = view.findViewById(R.id.text);
         return view;

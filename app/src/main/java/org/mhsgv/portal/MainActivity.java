@@ -1,10 +1,10 @@
 package org.mhsgv.portal;
 
-import androidx.appcompat.app.AppCompatActivity;
-import androidx.viewpager.widget.PagerAdapter;
-import androidx.viewpager.widget.ViewPager;
-
 import android.os.Bundle;
+
+import androidx.appcompat.app.AppCompatActivity;
+import androidx.fragment.app.FragmentStatePagerAdapter;
+import androidx.viewpager.widget.ViewPager;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -20,8 +20,9 @@ public class MainActivity extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
+        getWindow().setStatusBarColor(getResources().getColor(R.color.colorPrimary));
         viewPager = findViewById(R.id.mhsgv_pager);
-        pagerAdapter = new MhsgvPagerAdapter(getSupportFragmentManager(), BEHAVIOR_RESUME_ONLY_CURRENT_FRAGMENT, createForms());
+        pagerAdapter = new MhsgvPagerAdapter(getSupportFragmentManager(), FragmentStatePagerAdapter.POSITION_NONE, createForms());
         viewPager.setAdapter(pagerAdapter);
     }
 
