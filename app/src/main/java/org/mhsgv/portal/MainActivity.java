@@ -2,38 +2,48 @@ package org.mhsgv.portal;
 
 import android.os.Bundle;
 
+import androidx.annotation.NonNull;
 import androidx.appcompat.app.AppCompatActivity;
-import androidx.fragment.app.FragmentStatePagerAdapter;
-import androidx.viewpager.widget.ViewPager;
-
-import java.util.ArrayList;
-import java.util.List;
-
-import static androidx.fragment.app.FragmentStatePagerAdapter.BEHAVIOR_RESUME_ONLY_CURRENT_FRAGMENT;
+import androidx.fragment.app.Fragment;
+import androidx.fragment.app.FragmentActivity;
+import androidx.viewpager2.adapter.FragmentStateAdapter;
+//import info.androidhive.viewpager2.databinding.ActivityFragmentViewPagerBinding;
 
 public class MainActivity extends AppCompatActivity {
 
-    private ViewPager viewPager;
-    private MhsgvPagerAdapter pagerAdapter;
+    private String[] titles = new String[]{"Age", "Identity", "Resources"};
+
+    //ActivityFragmentViewPagerBinding binding;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
         getWindow().setStatusBarColor(getResources().getColor(R.color.colorPrimary));
-        viewPager = findViewById(R.id.mhsgv_pager);
-        pagerAdapter = new MhsgvPagerAdapter(getSupportFragmentManager(), FragmentStatePagerAdapter.POSITION_NONE, createForms());
-        viewPager.setAdapter(pagerAdapter);
+
     }
 
-    private List<MhsgvFragment> createForms() {
-        List<MhsgvFragment> f = new ArrayList<>();
-        MhsgvFragment form1 = MhsgvFragment.newInstance(R.layout.fragment_form1);
-        f.add(form1);
-        MhsgvFragment form2 = MhsgvFragment.newInstance(R.layout.fragment_form2);
-        f.add(form2);
-        MhsgvFragment form3 = MhsgvFragment.newInstance(R.layout.fragment_form3);
-        f.add(form3);
-        return f;
+    private class ViewPagerFragmentAdapter extends FragmentStateAdapter {
+
+        public ViewPagerFragmentAdapter(@NonNull FragmentActivity fragmentActivity) {
+            super(fragmentActivity);
+        }
+
+        @NonNull
+        @Override
+        public Fragment createFragment(int position) {
+            switch (position) {
+                case 0:
+                    return MhsgvFragment.newInstance(R.layout.fragment_form1);
+                case 1:
+                    return  MhsgvFragment.newInstance(R.layout.fragment_form2);
+            }
+            return MhsgvFragment.newInstance(R.layout.fragment_form3);
+        }
+
+        @Override
+        public int getItemCount() {
+            return titles.length;
+        }
     }
 }
