@@ -2,5 +2,8 @@
 <resources>
     <color name="background">#225c77</color>
     <color name="toolbar">#cfdee5</color>
+    <color name="dark_grey">#9f8d8d</color>
     <color name="light_grey">#d4d4d4</color>
+    <color name="unselected_grey">#e4e4e4</color>
+    <color name="accent">#e44a4d</color>
 </resources>
