@@ -7,20 +7,39 @@ import androidx.appcompat.app.AppCompatActivity;
 import androidx.fragment.app.Fragment;
 import androidx.fragment.app.FragmentActivity;
 import androidx.viewpager2.adapter.FragmentStateAdapter;
-//import info.androidhive.viewpager2.databinding.ActivityFragmentViewPagerBinding;
+import androidx.viewpager2.widget.ViewPager2;
+
+import com.google.android.material.tabs.TabLayout;
+import com.google.android.material.tabs.TabLayoutMediator;
 
 public class MainActivity extends AppCompatActivity {
 
     private String[] titles = new String[]{"Age", "Identity", "Resources"};
 
-    //ActivityFragmentViewPagerBinding binding;
+    TabLayout tabLayout;
+    ViewPager2 viewPager;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
-        getWindow().setStatusBarColor(getResources().getColor(R.color.colorPrimary));
+        getWindow().setStatusBarColor(getResources().getColor(R.color.background));
+        viewPager = findViewById(R.id.view_pager);
+        tabLayout = findViewById(R.id.tabs);
 
+        viewPager.setAdapter(createFormAdapter());
+        new TabLayoutMediator(tabLayout, viewPager,
+                new TabLayoutMediator.TabConfigurationStrategy() {
+                    @Override public void onConfigureTab(@NonNull TabLayout.Tab tab, int position) {
+                        tab.setText("Tab " + (position + 1));
+                    }
+                }).attach();
+
+    }
+
+    private ViewPagerFragmentAdapter createFormAdapter() {
+        ViewPagerFragmentAdapter adapter = new ViewPagerFragmentAdapter(this);
+        return adapter;
     }
 
     private class ViewPagerFragmentAdapter extends FragmentStateAdapter {
