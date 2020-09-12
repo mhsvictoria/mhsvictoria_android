@@ -7,4 +7,9 @@
         <item name="colorAccent">@color/toolbar</item>
     </style>
 
+    <style name="TabStyle">
+        <item name="android:textColor">@android:color/black</item>
+        <item name="android:background">@drawable/tab_background</item>
+    </style>
+
 </resources>

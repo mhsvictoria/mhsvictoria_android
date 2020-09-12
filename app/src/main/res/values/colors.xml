@@ -2,5 +2,5 @@
 <resources>
     <color name="background">#225c77</color>
     <color name="toolbar">#cfdee5</color>
-
+    <color name="light_grey">#d4d4d4</color>
 </resources>

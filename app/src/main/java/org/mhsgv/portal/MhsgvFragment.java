@@ -1,14 +1,12 @@
 package org.mhsgv.portal;
 
 import android.os.Bundle;
-
-import androidx.fragment.app.Fragment;
-
 import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
-import android.widget.TextView;
+
+import androidx.fragment.app.Fragment;
 
 /**
  * A simple {@link Fragment} subclass.
@@ -43,9 +41,8 @@ public class MhsgvFragment extends Fragment {
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
                              Bundle savedInstanceState) {
         // Inflate the layout for this fragment
-        Log.d(TAG, "FRAGMENT CREATE VIEW " + getArguments().getInt(LAYOUT));
         View view = inflater.inflate(getArguments().getInt(LAYOUT), container, false);
-        TextView textView = view.findViewById(R.id.text);
+        //TextView textView = view.findViewById(R.id.text);
         return view;
     }
 }

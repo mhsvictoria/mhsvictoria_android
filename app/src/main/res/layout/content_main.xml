@@ -28,22 +28,44 @@
 
     </LinearLayout>
 
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/top_panel">
+
+        </LinearLayout>
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:orientation="vertical">
 
+        <FrameLayout
+            android:layout_width="wrap_content"
+            android:layout_height="@dimen/tab_height"
+            android:layout_gravity="center">
+
+        <FrameLayout
+            android:layout_width="match_parent"
+            android:layout_height="2dp"
+            android:layout_marginStart="@dimen/tab_button_dim"
+            android:layout_marginEnd="@dimen/tab_button_dim"
+            android:background="@android:color/darker_gray"
+            android:layout_gravity="center"/>
+
         <com.google.android.material.tabs.TabLayout
             android:id="@+id/tabs"
             android:layout_width="wrap_content"
-            android:layout_height="60dp"
+            android:layout_height="match_parent"
             android:layout_gravity="center"
-            app:tabMode="scrollable"/>
+            android:background="@android:color/transparent"
+            app:tabMode="scrollable">
 
+            </com.google.android.material.tabs.TabLayout>
+        </FrameLayout>
         <androidx.viewpager2.widget.ViewPager2
             android:id="@+id/view_pager"
             android:layout_width="match_parent"
-            android:layout_height="300dp"/>
+            android:layout_height="@dimen/form_height"
+            android:layout_margin="@dimen/marginLrg"/>
     </LinearLayout>
     </LinearLayout>
 </androidx.coordinatorlayout.widget.CoordinatorLayout>

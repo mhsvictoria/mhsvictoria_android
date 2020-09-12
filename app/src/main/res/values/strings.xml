@@ -1,5 +1,9 @@
 <resources>
-    <string name="app_name">mshvictoria_android</string>
-    <!-- TODO: Remove or change this placeholder text -->
-    <string name="hello_blank_fragment">Hello blank fragment</string>
+    <string name="app_name">Mental Health Society of Victoria</string>
+
+    <string-array name="form_names">
+        <item name="age">Age</item>
+        <item name="identity">Identity</item>
+        <item name="resources">Resources</item>
+    </string-array>
 </resources>
