@@ -16,6 +16,8 @@ import androidx.viewpager2.widget.ViewPager2;
 import com.google.android.material.tabs.TabLayout;
 import com.google.android.material.tabs.TabLayoutMediator;
 
+import org.mhsgv.portal.form.FormFactory;
+
 import java.util.Objects;
 
 public class MainActivity extends AppCompatActivity {
@@ -87,13 +89,7 @@ public class MainActivity extends AppCompatActivity {
         @NonNull
         @Override
         public Fragment createFragment(int position) {
-            switch (position) {
-                case 0:
-                    return MhsgvFragment.newInstance(R.layout.fragment_form1);
-                case 1:
-                    return  MhsgvFragment.newInstance(R.layout.fragment_form2);
-            }
-            return MhsgvFragment.newInstance(R.layout.fragment_form3);
+            return FormFactory.create(position);
         }
 
         @Override
