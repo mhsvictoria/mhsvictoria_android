@@ -1,2 +1,3 @@
+include ':appointment'
 include ':app'
 rootProject.name = "mshvictoria_android"
