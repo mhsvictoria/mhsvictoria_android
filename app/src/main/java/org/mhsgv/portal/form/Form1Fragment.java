@@ -5,10 +5,9 @@ import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 
-import org.mhsgv.portal.MhsgvFragment;
 import org.mhsgv.portal.R;
 
-public class Form1Fragment extends MhsgvFragment {
+public class Form1Fragment extends FormFragment {
 
     private static String TAG = Form1Fragment.class.getSimpleName();
 

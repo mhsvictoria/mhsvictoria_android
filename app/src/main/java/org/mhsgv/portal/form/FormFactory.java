@@ -1,14 +1,10 @@
 package org.mhsgv.portal.form;
 
-import android.os.Bundle;
-
-import org.mhsgv.portal.MhsgvFragment;
-
 public class FormFactory {
 
-    public static MhsgvFragment create(int formId) throws IllegalStateException {
+    public static FormFragment create(int formId) throws IllegalStateException {
 
-        MhsgvFragment form;
+        FormFragment form;
         switch(formId) {
             case 0:
                 form = new Form1Fragment();
