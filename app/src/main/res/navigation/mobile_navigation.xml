@@ -3,25 +3,23 @@
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:id="@+id/mobile_navigation"
-    app:startDestination="@+id/nav_home">
-
-    <!--
-        <fragment
-            android:id="@+id/nav_home"
-            android:name="org.mhsgv.portal.navigation.HomeFragment"
-            android:label="@string/menu_home"
-            tools:layout="@layout/fragment_home" />
+    app:startDestination="@+id/nav_form">
 
         <fragment
-            android:id="@+id/nav_gallery"
-            android:name=".GalleryFragment"
-            android:label="@string/menu_gallery"
-            tools:layout="@layout/fragment_gallery" />
+            android:id="@+id/nav_form"
+            android:name="org.mhsgv.portal.navigation.FormFragment"
+            android:label="@string/menu_form"
+            tools:layout="@layout/fragment_form" />
 
         <fragment
-            android:id="@+id/nav_slideshow"
-            android:name=".SlideshowFragment"
-            android:label="@string/menu_slideshow"
-            tools:layout="@layout/fragment_slideshow" />
-            -->
+            android:id="@+id/nav_appointment"
+            android:name="org.mhsgv.portal.navigation.AppointmentFragment"
+            android:label="@string/menu_appointment"
+            tools:layout="@layout/fragment_appointment" />
+
+        <fragment
+            android:id="@+id/nav_map"
+            android:name="org.mhsgv.portal.navigation.MapFragment"
+            android:label="@string/menu_map"
+            tools:layout="@layout/fragment_map" />
 </navigation>

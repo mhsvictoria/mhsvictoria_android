@@ -7,12 +7,15 @@ import android.view.ViewGroup;
 
 import androidx.fragment.app.Fragment;
 
+import org.mhsgv.portal.R;
+
 public class FormFragment extends Fragment {
 
     protected View createView(LayoutInflater inflater, ViewGroup container,
                              Bundle savedInstanceState, int layout) {
         // Inflate the layout for this fragment
         View view = inflater.inflate(layout, container, false);
+
         return view;
     }
 

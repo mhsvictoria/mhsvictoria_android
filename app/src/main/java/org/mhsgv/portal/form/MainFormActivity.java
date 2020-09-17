@@ -1,4 +1,4 @@
-package org.mhsgv.portal;
+package org.mhsgv.portal.form;
 
 import android.annotation.SuppressLint;
 import android.os.Bundle;
@@ -16,11 +16,11 @@ import androidx.viewpager2.widget.ViewPager2;
 import com.google.android.material.tabs.TabLayout;
 import com.google.android.material.tabs.TabLayoutMediator;
 
-import org.mhsgv.portal.form.FormFactory;
+import org.mhsgv.portal.R;
 
 import java.util.Objects;
 
-public class MainActivity extends AppCompatActivity {
+public class MainFormActivity extends AppCompatActivity {
 
     private String[] titles;
 
@@ -31,7 +31,7 @@ public class MainActivity extends AppCompatActivity {
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_main);
+        setContentView(R.layout.activity_main_form);
         getWindow().setStatusBarColor(getResources().getColor(R.color.background));
         mainScrollView = findViewById(R.id.main_scroll_view);
 
