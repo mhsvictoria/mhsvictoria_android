@@ -2,8 +2,18 @@
 <menu xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto">
     <item
-        android:id="@+id/action_settings"
-        android:orderInCategory="100"
-        android:title="@string/action_resource_preferences"
+        android:id="@+id/action_resource"
+        android:orderInCategory="101"
+        android:title="@string/menu_resource"
+        app:showAsAction="never" />
+    <item
+        android:id="@+id/action_appointment"
+        android:orderInCategory="102"
+        android:title="@string/menu_appointment"
+        app:showAsAction="never" />
+    <item
+        android:id="@+id/action_map"
+        android:orderInCategory="103"
+        android:title="@string/menu_map"
         app:showAsAction="never" />
 </menu>

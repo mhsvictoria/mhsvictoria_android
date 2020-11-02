@@ -1,6 +1,8 @@
 <resources>
     <string name="app_name">Mental Health Society of Victoria</string>
-    <string name="action_resource_preferences">Resource Preferences</string>
+    <string name="action_resource">Search for Resources</string>
+    <string name="action_appointment">Book an Appointment</string>
+    <string name="action_map">Locate Resources</string>
     <string-array name="form_names">
         <item name="age">Age</item>
         <item name="identity">Identity</item>
@@ -14,8 +16,10 @@
     <string name="nav_header_desc">Navigation header</string>
     <string name="action_settings">Settings</string>
     <string name="button_begin_form">Begin Form</string>
+    <string name="position">%d$1</string>
 
-    <string name="menu_form">Configure Resources</string>
+    <string name="menu_form">Mental Health Society of Greater Victoria</string>
+    <string name="menu_resource">Book an Appointment</string>
     <string name="menu_appointment">Create a Calender Entry</string>
-    <string name="menu_map">Get Directions</string>
+    <string name="menu_map">Locate Resources</string>
 </resources>
