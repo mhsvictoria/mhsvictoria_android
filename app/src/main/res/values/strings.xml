@@ -19,7 +19,11 @@
     <string name="position">%d$1</string>
 
     <string name="menu_form">Mental Health Society of Greater Victoria</string>
-    <string name="menu_resource">Book an Appointment</string>
+    <string name="nav_resources">Resources</string>
+    <string name="nav_appointments">Appointments</string>
     <string name="menu_appointment">Create a Calender Entry</string>
-    <string name="menu_map">Locate Resources</string>
+    <string name="nav_mapped_locations">Maps</string>
+    <string name="search_resources">Search for resources...</string>
+    <string name="create_appointments">Create appointments...</string>
+    <string name="add_routes">Add routes...</string>
 </resources>

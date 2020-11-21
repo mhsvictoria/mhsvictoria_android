@@ -5,14 +5,37 @@
 
     <group android:checkableBehavior="single">
         <item
-            android:id="@+id/nav_form"
-            android:title="@string/menu_form" />
+            android:id="@+id/nav_resources"
+            android:title="@string/nav_resources"
+            android:icon="@android:drawable/ic_menu_zoom">
+            <group android:checkableBehavior="single">
+            <menu>
+                <item
+                    android:id="@+id/nav_search_resources"
+                    android:title="@string/search_resources"/>
+            </menu>
+            </group>
+        </item>
         <item
-            android:id="@+id/nav_appointment"
-            android:title="@string/menu_appointment" />
+            android:id="@+id/nav_appointments"
+            android:title="@string/nav_appointments"
+            android:icon="@android:drawable/ic_menu_my_calendar">
+        <menu>
+            <item
+                android:id="@+id/nav_create_appointments"
+                android:title="@string/create_appointments"/>
+        </menu>
+        </item>
         <item
-            android:id="@+id/nav_map"
-            android:title="@string/menu_map" />
+            android:id="@+id/nav_mapped_locations"
+            android:title="@string/nav_mapped_locations"
+            android:icon="@android:drawable/ic_menu_mylocation">
+        <menu>
+            <item
+                android:id="@+id/nav_create_routes"
+                android:title="@string/add_routes"/>
+        </menu>
+        </item>
     </group>
 
 </menu>

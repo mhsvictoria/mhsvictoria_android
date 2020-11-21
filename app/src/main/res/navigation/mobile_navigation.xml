@@ -8,18 +8,18 @@
         <fragment
             android:id="@+id/nav_form"
             android:name="org.mhsgv.portal.navigation.FormFragment"
-            android:label="@string/menu_form"
+            android:label="@string/nav_resources"
             tools:layout="@layout/fragment_form" />
 
         <fragment
             android:id="@+id/nav_appointment"
             android:name="org.mhsgv.portal.navigation.AppointmentFragment"
-            android:label="@string/menu_appointment"
+            android:label="@string/nav_appointments"
             tools:layout="@layout/fragment_appointment" />
 
         <fragment
             android:id="@+id/nav_map"
             android:name="org.mhsgv.portal.navigation.MapFragment"
-            android:label="@string/menu_map"
+            android:label="@string/nav_mapped_locations"
             tools:layout="@layout/fragment_map" />
 </navigation>
